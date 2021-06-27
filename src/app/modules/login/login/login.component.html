@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="login">
+    <div class="big-title">
+        <h1>Sign in</h1>
+    </div>
+
+    <div class="form">
+        <input type="text" class="form-control" placeholder="Email">
+        <input type="text" class="form-control" placeholder="Password">
+        <div class="btn">
+            <app-button [text]="'Sign in'"></app-button>
+        </div>
+        <span>Dont't have an account? <a (click)="goTo()">Sign up</a></span>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
