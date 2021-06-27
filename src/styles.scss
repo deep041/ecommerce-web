@@ -6,6 +6,7 @@ $primaryColor: #153A5B;
 $secondaryColor: #87A19D;
 $whiteColor: #FFF;
 $greyColor: #777;
+$lightColor: #F3756D;
 
 .flex {
     width: 100%;
@@ -22,6 +23,7 @@ $greyColor: #777;
     padding: 7px 25px;
     margin-top: 20px;
     width: fit-content;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -32,47 +34,73 @@ $greyColor: #777;
 
 body::-webkit-scrollbar {
     width: 7px;
-  }
+}
    
-  body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     box-shadow: #f1f1f1;
-  }
+}
    
-  body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background-color: #999;
-  }
+}
+
+.big-title {
+    margin: 70px auto;
+}
+
+.big-title h1 {
+    margin: 15px auto;
+    font-weight: bold;
+    text-align: center;
+    font-size: 45px;
+    color: $primaryColor;
+}
+
+.big-title::after {
+    left: 50%;
+    width: 50px;
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: -25px;
+    border-bottom: 6px solid;
+    border-bottom-color: $lightColor;
+}
+
 // !SECTION
 
 body {
     margin: 0px;
-    background-color: $secondaryColor;
+    background-color: $whiteColor;
     font-family: 'Roboto', sans-serif;
 }
 
 // SECTION Header
 
-header {
+.header {
     height: 10vh;
     background-color: $whiteColor;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
 }
 
 // SECTION Left
 
-header .left {
+.header .left {
     width: 30%;
     height: 100%;
     display: inline-block;
     vertical-align: top;
 }
 
-header .left .logo {
+.header .left .logo {
     font-size: 30px;
     margin-left: 25px;
     height: 100%;
     letter-spacing: 0.3rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
     font-family: 'Satisfy', cursive;
 }
 
@@ -80,20 +108,20 @@ header .left .logo {
 
 // SECTION Right
 
-header .right {
+.header .right {
     width: 70%;
     height: 100%;
     display: inline-block;
 }
 
-header .right ul {
+.header .right ul {
     list-style-type: none;
     float: right;
     margin: 0px;
     height: 100%;
 }
 
-header .right ul li {
+.header .right ul li {
     margin: 0px 20px;
     float: left;
     color: $primaryColor;
@@ -105,15 +133,15 @@ header .right ul li {
     cursor: pointer;
 }
 
-header .right ul li:hover {
+.header .right ul li:hover {
     color: $greyColor;
 }
 
-header .right ul li .cart {
+.header .right ul li .cart {
     font-size: 18px;
 }
 
-header .right ul li .fa-globe {
+.header .right ul li .fa-globe {
     margin-left: 5px;
 }
 
@@ -244,7 +272,7 @@ header .right ul li .fa-globe {
     height: 90vh;
     background-position: center;
     background-size: cover;
-    position: absolute;
+    position: relative;
     z-index: -2;
 }
 
@@ -271,3 +299,172 @@ header .right ul li .fa-globe {
 
 // !SECTION
 
+// SECTION Trending
+
+.trending {
+    margin-bottom: 50px;
+}
+
+.trending .product {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    cursor: default;
+}
+
+.trending .product .layer {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.trending .product .product-img .img .layer .size {
+    color: #FFf;
+}
+
+.trending .product .product-img .img .layer .buttons .button {
+    border: 1px solid $whiteColor;
+    background-color: transparent;
+    display: inline-block;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.trending .product .product-img .img .layer .buttons .button:hover {
+    background-color: $whiteColor;
+    color: $primaryColor;
+}
+
+.trending .product:hover .layer {
+    opacity: 1;
+    transition: 0.5s ease-in;
+    background-color: rgb(17 17 17 / 30%);
+}
+
+.trending .product .product-img {
+    width: 80%;
+    height: 250px;
+    background-color: #f2f2f2;
+    margin: 0px auto;
+}
+
+.trending .product .product-img .flex {
+    justify-content: space-around;
+}
+
+.trending .product .product-img .img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.trending .product .product-title {
+    display: block;
+    margin-top: 20px;
+    color: $primaryColor;
+    font-weight: bold;
+}
+
+.trending .product .product-text {
+    color: $greyColor;
+    display: block;
+    margin: 5px 3px;
+    transition: 0.5s;
+}
+
+// !SECTION
+
+// SECTION Footer 
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #F1F1F1;
+    color: #333;
+}
+
+.footer a {
+    cursor: pointer;
+    color: $primaryColor !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline !important;
+}
+
+// !SECTION
+
+// SECTION Login
+
+.login {
+    height: 70vh;
+    width: 100%;
+}
+
+.login .form {
+    text-align: center;
+}
+
+.login .form .form-control {
+    width: 25%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.login .form span {
+    display: block;
+}
+
+.login .form span a {
+    cursor: pointer;
+    color: $primaryColor;
+    text-decoration: underline;
+}
+
+// !SECTION
+
+// SECTION Sign-Up
+
+.sign-up {
+    height: 75vh;
+    width: 100%;
+}
+
+.sign-up .form {
+    text-align: center;
+}
+
+.sign-up .form .col-md-12 {
+    width: 30% !important;
+    margin: 0px auto;
+}
+
+.sign-up .form .col-md-12 .col-md-6 {
+    display: inline-block;
+}
+
+.sign-up .form .col-md-12 .col-md-6 .form-control {
+    width: 90%;
+}
+
+.sign-up .form .form-control {
+    width: 25%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.sign-up .form span {
+    display: block;
+}
+
+.sign-up .form span a {
+    cursor: pointer;
+    color: $primaryColor;
+    text-decoration: underline;
+}
+
+
+// !SECTION

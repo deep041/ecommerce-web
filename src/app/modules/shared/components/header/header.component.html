@@ -1,6 +1,6 @@
-<header>
+<div class="header">
     <div class="left">
-       <div class="logo">Deep's Store</div> 
+       <div class="logo" (click)="goTo('')">Deep's Store</div> 
     </div>
 
     <div class="right">
@@ -43,10 +43,10 @@
                 </div>
             </li>
             <li>Technology</li>
-            <li>Sign In</li>
+            <li (click)="goTo('login')">Sign In</li>
             <li>EN <i class="fa fa-globe" aria-hidden="true"></i></li>
             <li><i class="fa fa-shopping-cart cart" aria-hidden="true"></i></li>
         </ul>
     </div>
-</header>
+</div>
 
