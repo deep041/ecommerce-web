@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var jQuery: any;
 
@@ -9,7 +10,7 @@ declare var jQuery: any;
 })
 export class HeaderComponent implements OnInit {
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit(): void {
         // For dropdown
@@ -34,6 +35,10 @@ export class HeaderComponent implements OnInit {
 
             });
         });
+    }
+
+    goTo(component: string): void {
+       this.router.navigate(['/' + component]);
     }
 
 }

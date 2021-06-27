@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="sign-up">
+    <div class="big-title">
+        <h1>Sign up</h1>
+    </div>
+
+    <div class="form">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Last Name">
+            </div>
+        </div>
+        <input type="text" class="form-control" placeholder="Email">
+        <input type="text" class="form-control" placeholder="Password">
+        <div class="btn">
+            <app-button [text]="'Sign up'"></app-button>
+        </div>
+        <span>Already have an account? <a (click)="goTo()">Sign in</a></span>
+    </div>
+</div>
+
+<app-footer></app-footer>
