@@ -6,6 +6,7 @@ $primaryColor: #153A5B;
 $secondaryColor: #87A19D;
 $whiteColor: #FFF;
 $greyColor: #777;
+$lightColor: #F3756D;
 
 .flex {
     width: 100%;
@@ -32,20 +33,21 @@ $greyColor: #777;
 
 body::-webkit-scrollbar {
     width: 7px;
-  }
+}
    
-  body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     box-shadow: #f1f1f1;
-  }
+}
    
-  body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background-color: #999;
-  }
+}
+
 // !SECTION
 
 body {
     margin: 0px;
-    background-color: $secondaryColor;
+    background-color: $whiteColor;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -267,6 +269,106 @@ header .right ul li .fa-globe {
     letter-spacing: 0.04rem;
     font-size: 20px;
     margin-top: 20px;
+}
+
+// !SECTION
+
+// SECTION Trending
+
+.trending {
+    margin-top: 100vh;
+    margin-bottom: 50px;
+}
+
+.trending .title {
+    margin: 70px auto;
+}
+
+.trending .title h1 {
+    margin: 15px auto;
+    font-weight: bold;
+    text-align: center;
+    font-size: 45px;
+    color: $primaryColor;
+}
+
+.trending .title::after {
+    left: 50%;
+    width: 50px;
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: -25px;
+    border-bottom: 6px solid;
+    border-bottom-color: $lightColor;
+}
+
+.trending .product {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    cursor: default;
+}
+
+.trending .product .layer {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.trending .product .product-img .img .layer .size {
+    color: #FFf;
+}
+
+.trending .product .product-img .img .layer .buttons .button {
+    border: 1px solid $whiteColor;
+    background-color: transparent;
+    display: inline-block;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+.trending .product .product-img .img .layer .buttons .button:hover {
+    background-color: $whiteColor;
+    color: $primaryColor;
+}
+
+.trending .product:hover .layer {
+    opacity: 1;
+    transition: 0.5s ease-in;
+    background-color: rgb(17 17 17 / 30%);
+}
+
+.trending .product .product-img {
+    width: 80%;
+    height: 250px;
+    background-color: #f2f2f2;
+    margin: 0px auto;
+}
+
+.trending .product .product-img .flex {
+    justify-content: space-around;
+}
+
+.trending .product .product-img .img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.trending .product .product-title {
+    display: block;
+    margin-top: 20px;
+    color: $primaryColor;
+    font-weight: bold;
+}
+
+.trending .product .product-text {
+    color: $greyColor;
+    display: block;
+    margin: 5px 3px;
+    transition: 0.5s;
 }
 
 // !SECTION
