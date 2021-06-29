@@ -466,5 +466,110 @@ body {
     text-decoration: underline;
 }
 
+// !SECTION
+
+// SECTION Big Product Card
+
+.big-product-card .container {
+    background-image: url(assets/images/banners/big-card.jpg);
+    width: 100%;
+    height: 110vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 60px auto;
+    max-width: 100%;
+    width: 92%;
+}
+
+.big-product-card .container .left {
+    width: 35%;
+    height: 100%;
+    position: relative;
+    left: 6%;
+}    
+
+.big-product-card .container .left h2 {
+    color: $whiteColor;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: .2rem;
+}
+
+.big-product-card .container .left h6 {
+    color: $whiteColor;
+    font-size: 20px;
+    letter-spacing: .2rem;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+// !SECTION
+
+// SECTION Small Product Card
+
+.small-product-card .container {
+    max-width: 100%;
+    width: 92%;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.small-product-card .container .left {
+    background-image: url(assets/images/big-products/1.jpg);
+    width: 45%;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.small-product-card .container .right {
+    background-image: url(assets/images/big-products/2.jpg);
+    margin-left: 10%;
+}
+
+.small-product-card .container .left .right-text {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    text-align: left;
+}
+
+.small-product-card .container .left .right-text .flex {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.small-product-card .container .left .right-text .flex .right-button {
+    width: 80%;
+    text-align: right;
+    margin-top: 40px;
+    color: $primaryColor;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.small-product-card .container .left .right-text .flex .right-button:hover {
+    color: $greyColor;
+    text-decoration: none;
+}
+
+.small-product-card .container .left .right-text h3 {
+    color: $primaryColor;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    line-height: 2.5rem;
+}
+
+.small-product-card .container .left .right-text h6 {
+    color: $greyColor;
+    letter-spacing: .2rem;
+    margin-top: 15px;
+    line-height: 1.7rem;
+}
 
 // !SECTION

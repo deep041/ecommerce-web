@@ -4,18 +4,18 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { MainBannerComponent } from './home/main-banner/main-banner.component';
 import { TrendingComponent } from './trending/trending.component';
-import { TrendingProductCardComponent } from './trending-product-card/trending-product-card.component';
+import { SharedModule as ShareModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
     MainBannerComponent,
-    TrendingComponent,
-    TrendingProductCardComponent
+    TrendingComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ShareModule
   ]
 })
 export class HomeModule { }
