@@ -1,1 +1,1 @@
-# Sample Ecommerce Project
+# Ecommerce Project
