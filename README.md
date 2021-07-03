@@ -1,1 +1,2 @@
-# Sample Ecommerce Project
+# E-commerce Website
+**Created for learning**
